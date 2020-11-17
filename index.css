@@ -1,0 +1,148 @@
+body,html {
+    margin: 0;
+  }
+  
+  body {
+    font-family: Roboto, sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header, footer {
+    flex-basis: 48px;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  footer .item {
+    color: #999;
+  }
+  
+  footer .item.active {
+    color: #01FF70;
+    border-bottom: 1px dotted #01FF70 ;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 64px;
+    padding: 0 1em;
+  }
+  
+  header .title {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+  
+  main {
+    border-radius: 2em;
+    overflow: hidden;
+    margin: 1em 0.5em;
+  }
+  
+  main .box {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  main .box > :last-child::after {
+    content: '';
+    min-height: 20px;
+    display: block;
+  }
+  
+  main .box::-webkit-scrollbar {
+    display: none;
+  }
+  
+  main section {
+    margin-top: 1.5em;
+  }
+  
+  main section .heading {
+    color: #999;
+  }
+  
+  section .calls {
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .calls .call-row {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+  }
+  
+  .call-row .icon {
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    color: #eee;
+    background-color: #f12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+  }
+  
+  .call-row .details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #777;
+  }
+  
+  .calls > :last-child .details {
+    border-bottom: none;
+  }
+  
+  
+  .details .meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.875em;
+    color: #999;
+  }
+  
+  .meta .material-icons {
+    font-size: 1.25em;
+  }
+  
+  .meta > :nth-child(2) {
+    color: #0074d9;
+  }
+  
+  .meta > :first-child {
+    color: #f12;
+  }
+  
+  .meta .time {
+    font-size: 0.75em;
+    color: #999;
+    flex-grow: 1;
+    text-align: right;
+  }
